@@ -47,31 +47,26 @@ int main() {
 	for(int i=0; i<200000; i++) {
 		s += rand()%1000/1000.0;
 	}
-	std::cout << s << std::endl;
 	mclock.tic(1);
 	s = 0.0;
 	for(int i=0; i<300000; i++) {
 		s += rand()%1000/1000.0;
 	}
-	std::cout << s << std::endl;
 	mclock.tic(2);
 	s = 0.0;
 	for(int i=0; i<100000; i++) {
 		s += rand()%1000/1000.0;
 	}
-	std::cout << s << std::endl;
 	mclock.tic(3);
 	s = 0.0;
 	for(int i=0; i<150000; i++) {
 		s += rand()%1000/1000.0;
 	}
-	std::cout << s << std::endl;
 	mclock.tic(4);
 	s = 0.0;
 	for(int i=0; i<250000; i++) {
 		s += rand()%1000/1000.0;
 	}
-	std::cout << s << std::endl;
 	mclock.finish();
 	mclock.report();
 	return 0;
