@@ -41,17 +41,21 @@ with the header file:
 int main() {
 	cMulticlock mclock;
 	double s;
+// Start multiclock
 	mclock.start();
+// Start 0th clock to count ticks
 	mclock.tic(0);
 	s = 0.0;
 	for(int i=0; i<200000; i++) {
 		s += rand()%1000/1000.0;
 	}
+// Start 1st clock to count ticks, 0th counter is stopped
 	mclock.tic(1);
 	s = 0.0;
 	for(int i=0; i<300000; i++) {
 		s += rand()%1000/1000.0;
 	}
+// Start 2nd clock to count ticks, 1st counter is stopped
 	mclock.tic(2);
 	s = 0.0;
 	for(int i=0; i<100000; i++) {
@@ -67,7 +71,9 @@ int main() {
 	for(int i=0; i<250000; i++) {
 		s += rand()%1000/1000.0;
 	}
+// Currently active counter is stopped.
 	mclock.finish();
+// Print report
 	mclock.report();
 	return 0;
 }
