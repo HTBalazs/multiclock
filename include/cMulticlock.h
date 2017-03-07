@@ -34,5 +34,5 @@ public:
 	void tic(int const& i);
 	void start();
 	void finish();
-	void plot_result() const;	
+	void report() const;	
 };

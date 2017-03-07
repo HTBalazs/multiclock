@@ -43,7 +43,7 @@ void cMulticlock::finish() {
 	timer.tac();
 	clock[idx] += timer.get_difference();
 }
-void cMulticlock::plot_result() const {
+void cMulticlock::report() const {
 	pLogger::log<GRN>(" Multiclock summary:\n");
 	pLogger::log<GRN>("  Clock   |   Duration[%%]\n");
 	double total = 0;
