@@ -14,9 +14,6 @@ file(GLOB INCLUDES "include/*.h")
 set(STATIC_LIB_DIR /usr/local/lib/multiclock)
 set(INCLUDE_DIR /usr/local/include/multiclock)
 
-# set archive output to <project_directory>/lib
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY lib/)
-
 # generate libmulticlock.a file
 add_library(multiclock STATIC ${SOURCES})
 
