@@ -10,6 +10,7 @@ This repository contains a very basic profiler tool for C++ projects.
 
 ### Installation ###
 Dependency: ProLog ([https://bitbucket.org/lempsproject/prolog](Link URL))
+
 Multiclock can be installed executing the following commands:
 
 ```
