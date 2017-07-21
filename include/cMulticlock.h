@@ -27,7 +27,7 @@ class cMulticlock {
 	using Clock = std::chrono::duration<double>;
 	std::vector<Clock> clock;
 	int idx = 0;
-	pTimer timer;
+	ProLog::pTimer timer;
 	bool started = false;
 public:
 	cMulticlock() {}

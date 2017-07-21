@@ -20,6 +20,8 @@
 
 #include "cMulticlock.h"
 
+using namespace ProLog;
+
 void cMulticlock::tic(int const& i) {
 	if(!started) {
 		pLogger::warning_msg("Multiclock is not started yet.\n");
