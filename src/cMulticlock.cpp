@@ -41,6 +41,16 @@ void cMulticlock::start() {
 	started = true;
 	timer.tic();
 }
+void cMulticlock::pause() {
+	if(started) {
+		timer.tac();
+	}
+}
+void cMulticlock::resume() {
+	if(started) {
+		timer.tic();
+	}
+}
 void cMulticlock::finish() {
 	timer.tac();
 	clock[idx] += timer.get_difference();

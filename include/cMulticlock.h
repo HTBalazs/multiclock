@@ -33,6 +33,8 @@ public:
 	cMulticlock() {}
 	void tic(int const& i);
 	void start();
+    void pause();
+    void resume();
 	void finish();
 	void report() const;	
 };
