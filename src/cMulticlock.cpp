@@ -22,6 +22,12 @@
 
 using namespace ProLog;
 
+void cMulticlock::start() {
+	clock.push_back(Clock{});
+	idx = 0;
+	started = true;
+	timer.tic();
+}
 void cMulticlock::tic(int const& i) {
 	if(!started) {
 		pLogger::warning_msg("Multiclock is not started yet.\n");
@@ -35,15 +41,9 @@ void cMulticlock::tic(int const& i) {
 	idx = i;
 	timer.tic();
 }
-void cMulticlock::start() {
-	clock.push_back(Clock{});
-	idx = 0;
-	started = true;
-	timer.tic();
-}
 void cMulticlock::pause() {
 	if(started) {
-		timer.tac();
+		this->finish();
 	}
 }
 void cMulticlock::resume() {

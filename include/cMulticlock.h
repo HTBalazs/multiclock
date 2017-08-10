@@ -31,8 +31,8 @@ class cMulticlock {
 	bool started = false;
 public:
 	cMulticlock() {}
-	void tic(int const& i);
 	void start();
+    void tic(int const& i);
     void pause();
     void resume();
 	void finish();
